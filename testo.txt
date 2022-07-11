@@ -1,0 +1,53 @@
+Lo scopo di questa esercitazione è quella di creare una Java Application della polizia municipale con un’interfaccia testuale per la gestione delle infrazioni delle auto.
+
+Il modello ER su cui si basa l’applicazione è il seguente (vedi Allegato)
+
+L’applicazione dovrà avere il seguente menu testuale: (vedi Allegato)
+
+Con la funzionalità 1 vengono inseriti i dati delle automobili
+
+Con la funzionalità 2 vengono inseriti i dati delle infrazioni (per il campo data scegliere il tipo String per semplicità)
+
+Con la funzionalità 3 vengono visualizzate tutte le auto del DB
+
+Con la funzionalità 4 è possibile cercare un auto inserendo la targa esatta
+
+Con la funzionalità 5 è possibile visualizzare tutti i dati delle infrazioni inserite e delle auto collegate.
+
+Con la funzionalità 6 è possibile eliminare una specifica Infrazione fornendo l’Id.
+
+Al termine dell’applicazione effettuare un backup del DB.
+
+I passi da seguire nella realizzazione dell’applicazione sono i seguente:
+
+Traduci il modello ER nel corrispondente modello relazionale
+
+Crea database multedb e le tabelle con le apposite istruzioni nella PostgreSQL shell oppure nel Query Tool di PgAdmin
+
+Crea il progetto in Eclipse dividendo le classi in 2 o più packages
+
+Crea o importa da un vecchio progetto e modifica la classe ConnectionFactory per la connessione a museodb
+
+Realizza il menu dell’applicazione nella MainClass
+
+Realizza le classi Auto e Infrazione tenendo conto delle colonne presenti nel DB
+
+Realizza i DAO (AutoDAO e InfrazioneDAO) con i relativi metodi e richiamarli nel main per completare l’applicazione.
+
+NOTA: per l’acquisizione degli input utilizza le classi che conosci (Scanner, BufferedReader etc)
+
+Per l’esecuzione di queries JDBC utilizza Statement o PreparedStatement a seconda di quello che ritieni più opportuno.
+
+I prototipi dei metodi dei DAO sono i seguenti:
+
+public boolean inserisciAuto(Auto auto)
+
+public Auto cercaAuto(String targa)
+
+public ArrayList getAllAuto()
+
+public boolean inserisciInfrazione(Infrazione infrazione)
+
+public void stampaDatiInfrazioniAuto()
+
+public boolean eliminaInfrazione(int id)
